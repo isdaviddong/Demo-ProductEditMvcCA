@@ -7,6 +7,8 @@ namespace MvcProductCA.Controllers
 {
     public class ProductController : Controller
     {
+        //controller 中操作的只有 ApplicationService
+        //不涉及具體資料庫存取與Repo
         private readonly IProductAppService _productAppService;
 
         public ProductController(IProductAppService productAppService)
