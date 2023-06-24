@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MvcProductCA.Entities;
 using System.Collections.Generic;
+using MvcProductCA.UseCases;
 
 namespace MvcProductCA.Infrastructure
 {
@@ -12,5 +13,7 @@ namespace MvcProductCA.Infrastructure
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
         }
+      
+        public DbSet<MvcProductCA.UseCases.ProductDTO>? ProductDTO { get; set; }
     }
 }

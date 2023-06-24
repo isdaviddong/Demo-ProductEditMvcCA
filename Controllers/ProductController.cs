@@ -16,7 +16,6 @@ namespace MvcProductCA.Controllers
 
         public IActionResult Index()
         {
-            _productAppService.CreateProduct(new ProductDTO() { Price = 10, Name = "test" });
             var products = _productAppService.GetAllProducts();
             return View(products);
         }
@@ -31,6 +30,7 @@ namespace MvcProductCA.Controllers
         {
             if (ModelState.IsValid)
             {
+                //_productAppService.CreateProduct(new ProductDTO() { Price = 10, Name = "test" });
                 _productAppService.CreateProduct(product);
                 return RedirectToAction("Index");
             }
